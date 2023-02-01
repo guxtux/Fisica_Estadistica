@@ -1,0 +1,458 @@
+\documentclass[12pt]{beamer}
+\usepackage{../Estilos/BeamerFE}
+\usepackage{../Estilos/ColoresLatex}
+
+\input{../Preambulos/preambulo_Beamer_Warsaw_crane}
+\usefonttheme{serif}
+
+\newcommand\RBox[1]{%
+  \tikz\node[draw,rounded corners,align=center,] {#1};%
+}
+
+\resetcounteronoverlays{saveenumi}
+
+\title{\large{Curso de Física Estadística}}
+\author{M. en C. Gustavo Contreras Mayén}
+\date{1 de febrero de 2023}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame[allowframebreaks]{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\begin{frame}
+\frametitle{Equipo académico}
+\begin{center}
+\RBox{
+M. en C. Gustavo Contreras Mayén \\
+\href{mailto:gux7avo@ciencias.unam.mx}{gux7avo@ciencias.unam.mx}
+}
+\vskip 1cm
+\RBox{
+M. en C. Abraham Lima Buendía \\
+\href{mailto:abraham3081@ciencias.unam.mx}{abraham3081@ciencias.unam.mx}
+}
+\end{center}
+\end{frame}    
+
+\section{Objetivos}
+\frame{\frametitle{Temas a revisar}\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Metas esperadas}
+
+\begin{frame}
+\frametitle{Objetivos del curso}
+En conformidad con los objetivos que se indican en el plan curricular de la carrera de Física:
+\pause
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Esta es una alternativa al punto de vista de la termodinámica, en que se presentan modelos microscópicos de sistemas de muchas partículas.
+\item A partir de los postulados y las técnicas estadísticas se generan tanto la conexión conceptual con la termodinámica como las propiedades de los sistemas físicos.
+\end{enumerate}
+\end{frame}
+
+\section{Metodología de Enseñanza}
+\frame[allowframebreaks]{\frametitle{Temas a revisar}\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Antes de la clase}
+
+\begin{frame}
+\frametitle{Antes de la sesión}
+Para facilitar la discusión en el aula, el alumno revisará el material de trabajo que se le proporcionará oportunamente, así como la solución de algunos ejercicios, de tal manera que llegará a la clase conociendo el tema a desarrollar.
+\end{frame}
+\begin{frame}
+\frametitle{Antes de la clase}
+Daremos por entendido de que el alumno realizará la lectura y actividades establecidas.
+\end{frame}
+
+\subsection{Durante la clase}
+
+\begin{frame}
+\frametitle{Durante la clase}
+En un primer momento se tendrá la exposición con diálogo y discusión del material de trabajo con los temas a cubrir durante el semestre, \pause posteriormente se dedicará parte de la sesión para presentar ejercicios y revisar el procedimiento de solución.
+\end{frame}
+
+\subsection{Después de la clase}
+
+\begin{frame}
+\frametitle{Luego de la clase}
+Al concluir la clase, se tendrán ejercicios a resolver, para que pueda repasar el tema visto en clase.
+\\
+\bigskip
+\pause
+En caso de que algún ejercicio haya quedado incompleto, deberá de resolver y entregarlos en la plataforma Moodle.
+\end{frame}
+
+\subsection{Plataforma Moodle}
+
+\begin{frame}
+\frametitle{Recursos de apoyo}
+En este semestre el curso se impartirá en modalidad presencial, \pause se mantendrá el uso de la plataforma Moodle para el mismo, en donde se incluirán materiales de consulta: ejercicios adicionales, lecturas, artículos, enlaces a videos, a archivos para utilizar, etc. 
+\end{frame}
+\begin{frame}
+\frametitle{Plataforma para el envío}
+Por lo que se tendrá un apoyo adicional, de manera que contarán con herramientas adicionales.
+\end{frame}
+\begin{frame}
+\frametitle{Plataforma para el envío}
+Los ejercicios que forman parte de la evaluación así como los exámenes parciales resueltos se enviarán por Moodle, se otorgorá el suficiente tiempo para la solución y entrega.
+\\
+\bigskip
+\pause
+No se recibirán actividades por correo electrónico.
+\end{frame}
+
+\section{Evaluación}
+\frame{\frametitle{Temas a revisar}\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Elementos de evaluación}
+
+\begin{frame}
+\frametitle{Esquema de evaluación}
+El esquema de evaluación para el curso considera los siguientes puntos:
+\pause
+\setbeamercolor{item projected}{bg=burgundy,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item \textbf{Examen-Tarea $\mathbf{70\%}$} : Se tendrán tres examen-tarea durante el curso, se les proporcionará de manera adelantada y con fecha de entrega definida, no se recibirán entregas extemporáneas. 
+
+Se recomienda entregar el $100\%$ de los ejercicios.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Esquema de evaluación}
+Un examen-tarea se considera acreditado cuando la calificación obtenida es mayor o igual a seis. En caso de que en alguno (o más) examen-tarea, la calificación sea menor a seis, ya se es candidato a presentar el examen final del curso.
+\end{frame}
+\begin{frame}
+\frametitle{Esquema de evaluación}
+\setbeamercolor{item projected}{bg=burgundy,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item \textbf{Ejercicios $\mathbf{30\%}$} : Por cada tema del curso se tendrán ejercicios para resolver, en este caso, también se recomienda entregar el mayor número de ejercicios.
+
+Además de servir para repasar el tema, les aportará puntaje para la calificación final.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Calificación final}
+La calificación final del curso se obtendrá de las calificaciones de cada uno de los componentes de la evaluación: de los examen-tareas y ejercicios en clase. En el caso de obtener una calificación final mayor o igual a $6$, es la que se asentará en el acta del curso.
+\end{frame}
+\begin{frame}
+\frametitle{Esquema de evaluación}
+\setbeamercolor{item projected}{bg=burgundy,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item \textbf{Puntaje adicional}: Exposición individual de un ejemplo.
+\pause
+Se dedicarán sesiones para la presentación en clase de un ejemplo con el formalismo correspondiente del curso. 
+\pause
+Esta evaluación aportará puntaje para la calificación final. El puntaje máximo sobre la calificación final será de 1 punto.
+\end{enumerate}
+\end{frame}
+
+
+\section{Examen final}
+\frame{\frametitle{Temas a revisar}\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Consideraciones}
+
+\begin{frame}
+\frametitle{Puntos relevantes}
+Para presentar el examen final del curso se deben de cumplir cada una de las siguientes condiciones:
+\pause
+\setbeamercolor{item projected}{bg=aquamarine,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Que en un examen-tarea (o más), la calificación sea menor a seis. Si los tres examen-tarea tienen calificación aprobatoria, no se permite presentar el examen final para \enquote{subir} la calificación del curso.
+\item Se hayan entregado los tres examen-tarea parciales.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Para presentar el examen final}
+En caso de que no se cumplan las condiciones anteriores, no se podrá presentar el examen final.
+\end{frame}
+\begin{frame}
+\frametitle{Para presentar el examen final}
+En acuerdo con el Reglamento de Estudios Profesionales, habrá dos oportUnidads para presentar el examen final, cuyas fechas se indican en el calendario del semestre 2023-3.
+\end{frame}
+\begin{frame}
+\frametitle{Haciendo precisiones}
+Puntalizando sobre el examen final:
+\pause
+\setbeamercolor{item projected}{bg=lava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Si en la primera ronda de examen final, la calificación obtenida es aprobatoria (mayor o igual a seis), ésta es la que se asentará en el acta del curso, ya no se promedia con los otros elementos de evaluación.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Haciendo precisiones}
+\setbeamercolor{item projected}{bg=lava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Si la calificación del examen final en la primera ronda es no aprobatoria, se aplicará nuevamente un examen final en la segunda ronda. La calificación obtenida en esta segunda ronda, es la que se asentará en el acta del curso.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Haciendo precisiones}
+\setbeamercolor{item projected}{bg=lava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Si el alumno no se presenta a la primera ronda del examen final, tendrá cinco como calificación final. Ya no podrá presentar la segunda ronda del examen final.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Muy importante}
+\textocolor{red}{Importante: } \pause \textocolor{bole}{En caso de haber presentado al menos un examen-tarea y/o haber entregado al menos un ejercicio}, pero si ya no se tiene un posterior registro de entregas, se considera que abandonaron el curso, al no cumplir con los puntos de la lista anterior, \pause no se podrá presentar el examen final del curso.
+\end{frame}
+\begin{frame}
+\frametitle{Muy importante}
+Se asentará en el acta de calificaciones \textocolor{blue}{No Presentó (NP)}, si y solo si: el alumno no entrega ejercicio alguno y no entrega algún examen-tarea (¿?).
+\end{frame}
+\begin{frame}
+\frametitle{Muy importante}
+Ocupando nuevamente el Reglamento de Estudios Profesionales, tomen en cuenta que:
+\begin{itemize}[<+->]
+\setlength\itemsep{1pt}
+\item No \enquote{se guardan calificaciones}.
+\item No se renuncia a una calificación.
+\end{itemize}
+\end{frame}
+
+\section{Contenido del curso}
+\frame{\frametitle{Temas a revisar}\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Unidads temáticas}
+
+\begin{frame}
+\frametitle{Temario oficial}
+Se trabajará el temario oficial de la asignatura, que está disponible en: \href{https://www.fciencias.unam.mx/sites/default/files/temario/829.pdf}{la página de la Facultad.}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 1}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Introducción.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] El enfoque microscópico.
+    \item[\ding{51}] Relación entre los enfoques micro y macroscópico.
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 2}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Probabilidad en física estadística.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Camino aleatorio y distribución binomial.
+    \item[\ding{51}] Distribución de probabilidad.
+    \item[\ding{51}] Difusión y distribución de velocidades de Maxwell. 
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 3}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Mecánica estadística a la Gibbs.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Sistemas aislados: conjunto microcanónico de Gibbs.
+    \item[\ding{51}] Sistemas en contacto térmico: conjunto canónico.
+    \item[\ding{51}] Sistemas con número variable de partículas: conjunto gran canónico.
+    \item[\ding{51}] Funciones de distribucióin sujetas a constricciones.  
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 4}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Mecánica estadística cuántica.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Determinación de estados cuánticos.
+    \item[\ding{51}] Conjunto gran canónico, límite clásico.
+    \item[\ding{51}] Fermiones.
+    \item[\ding{51}] Bosones.
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 5}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Radiación de cuerpo negro.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Termodinámica de la radiación del cuerpo negro.
+    \item[\ding{51}] Estadística de la radiación del cuerpo negro.
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 6}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Sistemas de partículas interactuantes, transiciones de fase y puntos críticos.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Sólidos.
+    \item[\ding{51}] Gases clásicos no ideales.
+    \item[\ding{51}] Ferromagnetismo.
+    \item[\ding{51}] Sistemas dieléctricos.
+    \item[\ding{51}] Magnetismo y bajas temperaturas.
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 7}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Fluctuaciones.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Fluctuaciones: tendencias al equilibrio.
+    \item[\ding{51}] Movimiento browniano.
+    \item[\ding{51}] Procesos irreversibles.
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 8}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Fundamentos de teoría cinética.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Ecuación de Boltzmann.
+    \item[\ding{51}] Teoría del transporte.
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Unidad temática 9}
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Aplicaciones modernas de la física estadística.
+\pause
+\begin{itemize}[<+->]
+    \item[\ding{51}] Ecuaciones de estado.
+    \item[\ding{51}] Dispersión de luz.
+    \item[\ding{51}] Modelo de Ising.
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\section{Fechas importantes}
+\frame{\frametitle{Temas a revisar}\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Calendario semestral}
+
+\begin{frame}
+\frametitle{Fechas a considerar}
+\begin{itemize}[<+->]
+\setlength\itemsep{1pt}
+\item Lunes 30 de enero. Inicio del semestre 2023-3.
+\item \textcolor{red}{Lunes 6 de febrero. Día feriado.}
+\item \textcolor{red}{Lunes 20 de marzo. Día feriado.}
+\item \textcolor{red}{Lunes 3 al viernes 7 de abril. Período de asueto.}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Fechas a considerar}
+\begin{itemize}[<+->]
+\setlength\itemsep{1pt}
+\item \textcolor{red}{Lunes 1 de mayo. Día feriado.}
+\item \textcolor{red}{Miércoles 10 de mayo. Día feriado.}
+\item \textcolor{red}{Lunes 15 de mayo. Día feriado.}
+\item Viernes 26 de mayo. Fin de semestre 2023-3.
+\item Del lunes 29 de mayo al viernes 2 de junio, primera semana de finales.
+\item Del lunes 5 al viernes 9 de junio, segunda semana de finales.
+\end{itemize}
+\end{frame}
+
+\end{document}

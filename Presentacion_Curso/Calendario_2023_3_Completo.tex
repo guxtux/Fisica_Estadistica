@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{termcal}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[landscape]{geometry}
+\usepackage{xcolor}
+\usepackage{../Estilos/ColoresLatex}
+
+\newcommand{\marcoconferencia}{\fcolorbox{darkcyan}{darkcyan}{\textbf{\textcolor{white}{Videoconferencia}}}}
+\newcommand{\marcotarea}[1]{\fcolorbox{red}{white}{\textbf{\color{black}{Entrega Tema #1}}}}
+\newcommand{\marcotema}[1]{\color{blue}{\textbf{#1}}}
+\newcommand{\marcoclase}{\fcolorbox{capri}{capri}{\textbf{\textcolor{white}{Clase presencial}}}}
+\newcommand{\mitextocolor}[2]{\textcolor{#1}{\textbf{#2}}}
+
+\renewcommand{\calprintclass}{}
+\renewcommand{\calprintdate}{%
+     \ifnewmonth\framebox{\arabic{month}/\arabic{date}}%
+     \else\arabic{date}%
+     \fi}
+
+
+\author{M. en C. Gustavo Contreras Mayén. \texttt{gux7avo@ciencias.unam.mx}\\
+M. en C. Abraham Lima Buendía. \texttt{abraham3081@ciencias.unam.mx}}
+\title{Calendario Curso Mecánica Vectorial \\ \large{Semestre 2023-2}}
+\begin{document}
+\date{}
+\maketitle
+\begin{calendar}{1/30/23}{19}
+\setlength{\calwidth}{1.1\textwidth} 
+\setlength{\calboxdepth}{1in}
+% Description of the Week.
+
+\calday[Lunes]{\classday}
+\calday[Martes]{\classday}
+\calday[Miércoles]{\classday}
+\calday[Jueves]{\classday}
+\calday[Viernes]{\classday}
+\calday[Sábado]{\classday}
+\skipday % weekend (no class)
+
+
+% Holidays
+
+\options{2/6/23}{\noclassday}
+\caltext{2/6/23}{\color{red}{Día Feriado} \\[1em]}
+\options{3/20/23}{\noclassday}
+\caltext{3/20/23}{\color{red}{Día Feriado} \\[1em]}
+\options{4/3/23}{\noclassday}
+\caltext{4/3/23}{\color{red}{Día Feriado} \\[1em]}
+\options{4/4/23}{\noclassday}
+\caltext{4/4/23}{\color{red}{Día Feriado} \\[1em]}
+\options{4/5/23}{\noclassday}
+\caltext{4/5/23}{\color{red}{Día Feriado} \\[1em]}
+\options{4/6/23}{\noclassday}
+\caltext{4/6/23}{\color{red}{Día Feriado} \\[1em]}
+\options{4/7/23}{\noclassday}
+\caltext{4/7/23}{\color{red}{Día Feriado} \\[1em]}
+\options{5/10/23}{\noclassday}
+\caltext{5/10/23}{\color{red}{Día Feriado} \\[1em]}
+\options{5/15/23}{\noclassday}
+\caltext{5/15/23}{\color{red}{Día Feriado} \\[1em]}
+
+%Temas del curso
+\caltext{1/30/2023}{\textbf{Inicio del semestre 2023-2}}
+
+\caltext{1/30/23}{\textbf{Semana 1}}
+\caltext{1/31/23}{\mitextocolor{awesome}{Presentación curso. \\ }\mitextocolor{blue}{Tema 1}}
+\caltext{2/2/23}{\mitextocolor{orange-red}{Tema 2}}
+\caltext{2/4/23}{\mitextocolor{orange-red}{Tema 2}}
+
+\caltext{2/6/23}{\textcolor{black}{\textbf{Semana 2}}}
+\caltext{2/7/23}{\mitextocolor{byzantine}{Tema 3}}
+\caltext{2/9/23}{\mitextocolor{byzantine}{Tema 3}}
+\caltext{2/11/23}{\mitextocolor{byzantine}{Tema 3}}
+
+\caltext{2/13/23}{\textbf{Semana 3}}
+\caltext{2/14/23}{\mitextocolor{byzantine}{Tema 3}}
+\caltext{2/16/23}{\mitextocolor{byzantine}{Tema 3}}
+\caltext{2/18/23}{\mitextocolor{byzantine}{Tema 3}}
+
+\caltext{2/20/23}{\textbf{Semana 4}}
+\caltext{2/21/23}{\mitextocolor{brickred}{Tema 4}}
+\caltext{2/23/23}{\mitextocolor{brickred}{Tema 4}}
+\caltext{2/25/23}{\mitextocolor{brickred}{Tema 4}}
+
+\caltext{2/27/23}{\textbf{Semana 5}}
+\caltext{2/28/23}{\mitextocolor{brickred}{Tema 4}}
+\caltext{3/2/23}{\mitextocolor{brickred}{Tema 4}}
+\caltext{3/4/23}{\mitextocolor{brickred}{Tema 4}}
+
+\caltext{3/6/23}{\textbf{Semana 6}}
+\caltext{3/7/23}{\mitextocolor{brickred}{Tema 4}}
+\caltext{3/9/23}{\mitextocolor{brickred}{Tema 5}}
+\caltext{3/11/23}{\mitextocolor{brickred}{Tema 5}}
+
+\caltext{3/13/23}{\textbf{Semana 7}}
+\caltext{3/14/23}{\mitextocolor{darkcyan}{Tema 5}}
+\caltext{3/16/23}{\mitextocolor{darkcyan}{Tema 5}}
+\caltext{3/18/23}{\mitextocolor{darkcyan}{Tema 5}}
+
+\caltext{3/20/23}{\textcolor{black}{\textbf{Semana 8}}}
+\caltext{3/21/23}{\mitextocolor{darkcyan}{Tema 5}}
+\caltext{3/23/23}{\mitextocolor{darkmagenta}{Tema 6}}
+\caltext{3/25/23}{\mitextocolor{darkmagenta}{Tema 6}}
+
+\caltext{3/27/23}{\textbf{Semana 9}}
+\caltext{3/28/23}{\mitextocolor{darkmagenta}{Tema 6}}
+\caltext{3/30/23}{\mitextocolor{darkmagenta}{Tema 6}}
+\caltext{4/1/23}{\mitextocolor{darkmagenta}{Tema 6}}
+
+\caltext{4/10/23}{\textbf{Semana 10}}
+\caltext{4/11/23}{\mitextocolor{darkmagenta}{Tema 6}}
+\caltext{4/13/23}{\mitextocolor{darkmagenta}{Tema 6}}
+\caltext{4/15/23}{\mitextocolor{internationalorange}{Tema 7}}
+
+\caltext{4/17/23}{\textbf{Semana 11}}
+\caltext{4/18/23}{\mitextocolor{internationalorange}{Tema 7}}
+\caltext{4/20/23}{\mitextocolor{internationalorange}{Tema 7}}
+\caltext{4/22/23}{\mitextocolor{internationalorange}{Tema 7}}
+
+\caltext{4/24/23}{\textbf{Semana 12}}
+\caltext{4/25/23}{\mitextocolor{internationalorange}{Tema 7}}
+\caltext{4/27/23}{\mitextocolor{internationalorange}{Tema 7}}
+\caltext{4/29/23}{\mitextocolor{iris}{Tema 8}}
+
+\caltext{5/1/23}{\textbf{Semana 13}}
+\caltext{5/2/23}{\mitextocolor{iris}{Tema 8}}
+\caltext{5/4/23}{\mitextocolor{iris}{Tema 8}}
+\caltext{5/6/23}{\mitextocolor{iris}{Tema 8}}
+
+\caltext{5/8/23}{\textbf{Semana 14}}
+\caltext{5/9/23}{\mitextocolor{iris}{Tema 8}}
+\caltext{5/11/23}{\mitextocolor{islamicgreen}{Tema 9}}
+\caltext{5/13/23}{\mitextocolor{islamicgreen}{Tema 9}}
+
+\caltext{5/15/23}{\textcolor{black}{\textbf{Semana 15}}}
+\caltext{5/16/23}{\mitextocolor{islamicgreen}{Tema 9}}
+\caltext{5/18/23}{\mitextocolor{islamicgreen}{Tema 9}}
+\caltext{5/20/23}{\mitextocolor{ao}{Tema 10}}
+
+\caltext{5/22/23}{\textcolor{black}{\textbf{Semana 16}}}
+\caltext{5/23/23}{\mitextocolor{ao}{Tema 10}}
+\caltext{5/25/23}{\mitextocolor{ao}{Tema 10}}
+\caltext{5/27/23}{\mitextocolor{ao}{Tema 10}}
+
+\caltext{5/26/23}{\textbf{Fin de semestre}}
+
+\caltext{5/29/23}{\color{black}{\textbf{Semana 1 Finales.}}}
+\caltext{6/5/23}{\color{black}{\textbf{Semana 2 Finales.}}}
+\end{calendar}
+\end{document}

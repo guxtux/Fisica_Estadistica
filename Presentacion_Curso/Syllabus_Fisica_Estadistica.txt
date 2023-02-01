@@ -1,0 +1,119 @@
+Syllabus de Curso de Física Estadística.
+Semestre 2023-2 Grupo 8265.
+
+Equipo académico:
+M. en C. Gustavo Contreras Mayén. gux7avo@ciencias.unam.mx
+M. en C. Abraham Lima Buendía. abraham3081@ciencias.unam.mx
+
+Objetivos:
+
+En conformidad con los objetivos que se indican en el plan curricular de la carrera de Física:
+
+Esta es una alternativa al punto de vista de la termodinámica, en que se presentan modelos microscópicos de sistemas de muchas partículas.
+
+A partir de los postulados y las técnicas estadísticas se generan tanto la conexión conceptual con la termodinámica como las propiedades de los sistemas físicos.
+
+
+Metodología de Enseñanza.
+
+Antes de la clase.
+
+Para facilitar la discusión en el aula, el alumno revisará el material de trabajo que se le proporcionará oportunamente, así como la solución de algunos ejercicios, de tal manera que llegará a la clase conociendo el tema a desarrollar. Daremos por entendido de que el alumno realizará la lectura y actividades establecidas.
+
+Durante la clase.
+
+En un primer momento se tendrá la exposición con diálogo y discusión del material de trabajo con los temas a cubrir durante el semestre, posteriormente se dedicará parte de la sesión para presentar ejercicios y revisar el procedimiento de solución.
+
+Después de la clase.
+
+Al concluir la clase, se tendrán ejercicios a resolver, para que pueda repasar el tema visto en clase. En caso de que algún ejercicio haya quedado incompleto, deberá de resolver y entregarlos en la plataforma Moodle.
+
+Plataforma Moodle.
+
+En este semestre el curso se impartirá en modalidad presencial, se mantendrá el uso de la plataforma Moodle para el mismo, en donde se incluirán materiales de consulta: ejercicios adicionales, lecturas, artículos, enlaces a videos, a archivos para utilizar, por lo que se tendrá un apoyo adicional, de manera que contarán con herramientas adicionales.
+
+Los ejercicios que forman parte de la evaluación así como los exámenes parciales resueltos se enviarán por Moodle, se otorgorá el suficiente tiempo para la solución y entrega. No se recibirán actividades por correo electrónico.
+
+Evaluación.
+
+El esquema de evaluación para el curso considera los siguientes puntos:
+
+Examen-Tarea 70%: Se tendrán tres examen-tarea durante el curso, se les proporcionará de manera adelantada y con fecha de entrega definida, no se recibirán entregas extemporáneas. 
+
+Se recomienda entregar el 100 de los ejercicios. Un examen-tarea se considera acreditado cuando la calificación obtenida es mayor o igual a seis. En caso de que en alguno (o más) examen-tarea, la calificación sea menor a seis, ya se es candidato a presentar el examen final del curso.
+
+Ejercicios 30%: Por cada tema del curso se tendrán ejercicios para resolver, en este caso, también se recomienda entregar el mayor número de ejercicios. Además de servir para repasar el tema, les aportará puntaje para la calificación final.
+
+Puntaje adicional: Exposición individual de un ejemplo. Se dedicarán sesiones para la presentación en clase de un ejemplo con el formalismo correspondiente del curso. Esta evaluación aportará puntaje para la calificación final. El puntaje máximo sobre la calificación final será de 1 punto.
+
+La calificación final del curso se obtendrá de las calificaciones de cada uno de los componentes de la evaluación: de los examen-tareas y ejercicios en clase. En el caso de obtener una calificación final mayor o igual a 6, es la que se asentará en el acta del curso.
+
+Examen final.
+
+Para presentar el examen final del curso se deben de cumplir cada una de las siguientes condiciones:
+
+Que en un examen-tarea (o más), la calificación sea menor a seis. Si los tres examen-tarea tienen calificación aprobatoria, no se permite presentar el examen final para subir la calificación del curso.
+
+Se hayan entregado los tres examen-tarea parciales.
+
+En caso de que no se cumplan las condiciones anteriores, no se podrá presentar el examen final. En acuerdo con el Reglamento de Estudios Profesionales, habrá dos oportunidades para presentar el examen final, cuyas fechas se indican en el calendario del semestre 2023-3.
+
+Puntalizando sobre el examen final:
+
+Si en la primera ronda de examen final, la calificación obtenida es aprobatoria (mayor o igual a seis), ésta es la que se asentará en el acta del curso, ya no se promedia con los otros elementos de evaluación.
+
+Si la calificación del examen final en la primera ronda es no aprobatoria, se aplicará nuevamente un examen final en la segunda ronda. La calificación obtenida en esta segunda ronda, es la que se asentará en el acta del curso.
+
+Si el alumno no se presenta a la primera ronda del examen final, tendrá cinco como calificación final. Ya no podrá presentar la segunda ronda del examen final.
+
+Importante: En caso de haber presentado al menos un examen-tarea y/o haber entregado al menos un ejercicio, pero si ya no se tiene un posterior registro de entregas, se considera que abandonaron el curso, al no cumplir con los puntos de la lista del numeral, no se podrá presentar el examen final del curso.
+
+Se asentará en el acta de calificaciones No Presentó (NP), si y solo si: el alumno no entrega ejercicio alguno y no entrega algún examen-tarea (¿?). Ocupando nuevamente el Reglamento de Estudios Profesionales, tomen en cuenta que:
+
+No se guardan calificaciones.
+No se renuncia a una calificación.
+
+Contenido del curso:
+
+Se trabajará el temario oficial de la asignatura, que está disponible en: 
+https://www.fciencias.unam.mx/sites/default/files/temario/829.pdf
+
+Los temas del curso son:
+
+
+Introducción.
+Probabilidad en física estadística.
+Mecánica estadística a la Gibbs.
+Mecánica estadística cuántica.
+La radiación de cuerpo negro.
+Sistema de partículas interactuantes, transiciones de fase y puntos críticos.
+Fluctuaciones.
+Fundamentos de teoría cinética.
+Aplicaciones modernas de la física estadística.
+
+
+Fechas importantes.
+
+Lunes 30 de enero. Inicio del semestre 2023-3.
+Lunes 6 de febrero. Día feriado.
+Lunes 20 de marzo. Día feriado.
+Lunes 3 al viernes 7 de abril. Período de asueto.
+Lunes 1 de mayo. Día feriado.
+Miércoles 10 de mayo. Día feriado.
+Lunes 15 de mayo. Día feriado.
+Viernes 26 de mayo. Fin de semestre 2023-3.
+Del lunes 29 de mayo al viernes 2 de junio, primera semana de finales.
+Del lunes 5 al viernes 9 de junio, segunda semana de finales.
+
+Referencias bibliográficas.
+
+Nos apoyaremos con la bibliografía recomendada para la asignatura, así como de otros materiales que se estarán incorporando en cada tema de manera particular.
+
+Reif, F., 1968, Fundamentos de física estadística y térmica, Editorial del Castillo, Madrid, España.
+Kittel, C., Kroemer, H., 1980, Thermal physics, second edition, W.H. Freeman & Co., San Francisco, USA.
+García Colín, L., 1995, Termodinámica estadística, Universidad Autónoma Metropolitana Ixtapalapa, México, D.F.
+
+Bibliografía complementaria
+Andrews, F.C., 1975, Equilibrium statistical mechanics, second edition, John Wiley & Sons, New York, USA.
+Mandl, F., 1979, Física estadística, Editorial LIMUSA, México.
+Kubo, R., 1974, Statistical mechanics, fourth edition, North Holland Publishing Co., New York.
