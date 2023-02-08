@@ -1,0 +1,577 @@
+\documentclass[12pt]{beamer}
+\usepackage{../Estilos/BeamerFE}
+\usepackage{../Estilos/ColoresLatex}
+
+\input{../Preambulos/preambulo_Beamer_Warsaw_crane}
+\usefonttheme{serif}
+
+\newcommand\RBox[1]{%
+  \tikz\node[draw,rounded corners,align=center,] {#1};%
+}
+
+\usepackage{gensymb}
+\DeclareSIUnit[quantity-product = \,]{\degreeCelsius}{\ensuremath{\degree} C}
+
+\resetcounteronoverlays{saveenumi}
+
+\title{\large{Introducción a la Física Estadística}}
+\author{M. en C. Gustavo Contreras Mayén}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame[allowframebreaks]{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{Objetivos de la Física Estadística}
+\frame{\frametitle{Temas a revisar}\tableofcontents[currentsection, hideothersubsections]}
+\subsection{¿De qué va la asignatura?}
+
+\begin{frame}
+\frametitle{¿Qué es la física estadística}
+\setbeamercolor{item projected}{bg=bananayellow,fg=blue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item La \textocolor{byzantine}{física estadística} es la rama de la física que estudia los sistemas que están formados por un gran número de constituyentes (o \textocolor{red}{grados de libertad}).
+\item Su objetivo consiste en establecer un vínculo entre las propiedades esenciales de sus constituyentes y las propiedades macroscópicas o colectivas de un sistema.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la física estadística}
+\setbeamercolor{item projected}{bg=bananayellow,fg=blue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Considerando a los constituyentes como entidades microscópicas, diremos que la \textocolor{magenta}{física estadística} \pause \textocolor{cobalt}{trata de explicar las propiedades macroscópicas de la materia en términos de sus propiedades microscópicas}.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la física estadística}
+\setbeamercolor{item projected}{bg=bananayellow,fg=blue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item La naturaleza tiene una estructura jerárquica, compuesta por muy diversas escalas:
+\begin{itemize}[<+->]
+\item Quarks.
+\item Partículas elementales (leptones, bosones)
+\item Átomos.
+\item Moléculas.
+\item Macromoléculas.
+\end{itemize}
+\conti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la física estadística}
+\setbeamercolor{item projected}{bg=bananayellow}
+\begin{itemize}[<+->]
+\item Gases/líquidos/sólidos
+\item Planetas.
+\item Estrellas.
+\item Sistemas planetarios.
+\item Galaxias.
+\item Cúmulos.
+\item Supercúmulos de galaxias
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la física estadística}
+\setbeamercolor{item projected}{bg=bananayellow,fg=blue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Por ejemplo, \textocolor{armygreen}{en un gas} \pause llamaremos \textocolor{carmine}{nivel microscópico} \pause al definido en las escalas de longitud y tiempo características de los átomos que lo componen \pause y \textocolor{bole}{nivel macroscópico} al definido en las escalas de longitud y tiempo en las que realizamos medidas en un laboratorio.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la física estadística}
+\setbeamercolor{item projected}{bg=bananayellow,fg=blue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Las leyes físicas que los rigen pueden ser de apariencia distinta. \pause Por ejemplo:
+\begin{itemize}
+\item A escalas microscópicas puede existir reversibilidad temporal, que se pierde a escalas grandes.
+\item En sistemas macroscópicos se pueden romper espontáneamente simetrías, cosa que no ocurre microscópicamente.
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la física estadística}
+\setbeamercolor{item projected}{bg=bananayellow,fg=blue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item  En particular, aparece jerarquización de la descripción cuando el nivel microscópico tiene muchos grados de libertad y las escalas típicas de longitud y tiempo son muy distintas en ambos niveles.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Micro y macro elementos}
+¿Cuáles son los \textcolor{cerise}{micro-constituyentes} y cuáles los \textocolor{ao}{macro}? \pause Depende del tipo de descripción que queramos:
+\pause
+\setbeamercolor{item projected}{bg=aquamarine,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Gas, líquido o sólido como conjunto de moléculas.
+\item LASER como conjunto de muchos fotones.
+\item Una galaxia como conjunto (gas) de estrellas.
+\item Red neuronal como conjunto de muchas neuronas.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Micro y macro elementos}
+\setbeamercolor{item projected}{bg=aquamarine,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Proteínas como conjuntos alineados de aminoácidos.
+\item Poblaciones ecológicas: individuos y especies interaccionando.
+\item Economía: conjunto de agentes que intercambian capital.
+\item Evolución de normas y convenciones lingüísticas como resultado de interacción entre hablantes.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Magnitudes en los niveles}
+En cada nivel se pueden definir magnitudes que caracterizan completamente las propiedades del sistema en dicho nivel.
+\\
+\bigskip
+\pause
+Además existen ciertas relaciones entre ellas (leyes) que son autónomas.
+\end{frame}
+
+\subsection{Ejemplos Física Estadística}
+
+\begin{frame}
+\frametitle{Un recipiente con gas de Helio}
+\setbeamercolor{item projected}{bg=bisque,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item \textocolor{blue-violet}{Descripción microscópica}: \pause Los átomos de Helio interaccionan muy débilmente y es una buena aproximación pensar que evolucionan como partículas libres clásicas.
+\\
+\bigskip
+\pause
+Las variables que describen al sistema en este nivel son las posiciones y momentos lineales de todos los átomos de Helio.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Un recipiente con gas de Helio}    
+Su evolución temporal es muy sencilla clásicamente: \pause los átomos se mueven en linea recta (siguiendo las leyes de Newton) hasta que colisionan con la pared del recipiente de la que salen rebotados.
+\end{frame}
+\begin{frame}
+\frametitle{Un recipiente con gas de Helio}
+\setbeamercolor{item projected}{bg=bisque,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Descripción macroscópica: \pause El gas de Helio en equilibrio termodinámico obedece la ecuación de estado de un gas ideal: \pause $P V = N k B T$ independientemente del estado cinético de cada uno de sus átomos.
+\\
+\bigskip
+\pause
+¿Que son $T$ y $P$ desde el punto de vista microscópico? \pause ¿Por qué están relacionados?
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Agua}
+\setbeamercolor{item projected}{bg=amethyst,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item A nivel microscópico no es más que un conjunto enorme de moléculas de $H_{2} O$.
+\item Pero a nivel macroscópico puede estructurarse de muchos modos distintos, \pause es decir en distintas fases bien conocidas en la mayoría de los casos, con propiedades radicalmente distintas (aunque las moléculas y sus interacciones son las mismas)
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Un trozo de cobre}
+\setbeamercolor{item projected}{bg=aureolin,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item \textocolor{red}{Descripción microscópica}: \pause El trozo de cobre está compuesto de átomos interaccionando con un potencial efectivo.
+\\
+La variable que describe al sistema en este nivel es la función de ondas. Su evolución en el tiempo queda determinada al resolver la ecuación de Schrödinger.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Un trozo de cobre}
+\setbeamercolor{item projected}{bg=aureolin,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item \textocolor{ao}{Descripción macroscópica}:  \pause El trozo de cobre es un sólido a temperatura ambiente con unas propiedades macroscópicas bien definidas.
+\\
+Por ejemplo, \pause cuando está en equilibrio termodinámico tiene una ecuación de estado propia, \pause calor específico en función de la temperatura, \pause módulo de Young, \pause dureza, \pause velocidad de propagación del sonido, etc. 
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Un trozo de cobre}
+\setbeamercolor{item projected}{bg=aureolin,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Cuando conduce la electricidad está en un estado de no-equilibrio y se cumple la Ley de Ohm V = IR que es directamente mesurable.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Fotones de la radiación}
+\setbeamercolor{item projected}{bg=brickred,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Las \textocolor{brown(web)}{leyes microscópicas} son las leyes cuánticas que relacionan la energía con la frecuencia: $E = h \nu$.
+\item A partir de aquí hay que derivar \textocolor{cadmiumorange}{leyes macroscópicas} que explican, \pause por ejemplo, la distribución de energía en función de la frecuencia en una cavidad (cuerpo negro) en la que hay radiación (ley de Planck).
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Fotones de la radiación} 
+O por qué ciertos materiales radian luz desordenada (bombilla) o luz coherente (láser)
+\end{frame}
+\begin{frame}
+\frametitle{Materiales magnéticos}
+Son conocidas las propiedades magnéticas de materiales como los óxidos de hierro.
+\pause 
+\setbeamercolor{item projected}{bg=celadon,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Desde un punto de vista microscópico el origen del magnetismo está en los momentos dipolares magnéticos intrínsecos de los átomos, que a su vez viene del momento magnéticos de las cargas eléctricas en movimiento y el momento magnético de espín.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Materiales magnéticos}
+Estos espines pueden romper espontáneamente la simetría up-down y ordenarse debido a la interacción de intercambio entre momentos vecinos (un efecto puramente cuántico), dando lugar a una magnetización neta.
+\end{frame}
+\begin{frame}
+\frametitle{Fotones de la radiación}
+\setbeamercolor{item projected}{bg=celadon,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Algunas preguntas interesantes que podemos responder usando la física estadística son:
+\begin{itemize}[<+->]
+\item ¿Cómo se combinan estos momentos individuales para producir magnetización espontánea?
+\item ¿Por qué unos materiales son magnéticos y otros no?
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Fotones de la radiación}
+\setbeamercolor{item projected}{bg=celadon,fg=black}
+\begin{itemize}[<+->]  
+\item ¿Por qué la magnetización espontánea desaparece por encima de una temperatura muy precisa (temperatura de Curie)?
+\item ¿Por qué las simetrías no se pueden romper espontáneamente en sistemas microscópicos y si en sistemas con muchísimos componentes?
+\end{itemize}
+\end{frame}
+
+\subsection{Objetivos de la FE}
+
+\begin{frame}
+\frametitle{Objetivos de la Física Estadística}
+Una observación importante es que, en general, \textocolor{carmine}{el todo es más que la suma de las partes}.
+\\
+\bigskip
+\pause
+Esto es, la conducta global de un sistema de muchos cuerpos NO coincide en general con la suma de las conductas individuales de los constituyentes elementales. \pause De esta forma, la Física Estadística es esencialmente una teoría no lineal.
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos de la Física Estadística}  
+También es relevante notar que \textocolor{ao}{hay muchos estados microscópicos} que dan lugar al mismo \textocolor{lava}{estado macroscópico}.
+\\
+\bigskip
+\pause
+Como ya veremos, Boltzmann identificó correctamente esta degeneración con el concepto termodinámico de entropía.
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos de la Física Estadística}  
+Muchos de los detalles de las interacciones entre partículas a nivel microscópico no influyen cualitativamente en su comportamiento macroscópico, \pause por lo que es posible \textocolor{armygreen}{formular modelos altamente simplificados} de la realidad que, \pause sin embargo, capturan los ingredientes esenciales y proporcionan excelentes resultados.
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos de la Física Estadística}  
+El \textocolor{cobalt}{Objetivo General} de la Física Estadística es relacionar el nivel microscópico con el macroscópico de un sistema dado.
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos particulares de la Física Estadística}  
+Algunos de los objetivos particulares son:
+\pause
+\setbeamercolor{item projected}{bg=cerise,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Determinar el rango de aplicabilidad de las descripciones macroscópicas: 
+\\ \pause
+Por ejemplo, las escalas de tiempo y espacio en las que funciona, el rango de validez de los valores de los parámetros macroscópicos, etc.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos particulares de la Física Estadística}  
+\setbeamercolor{item projected}{bg=cerise,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Caracterización y comprensión de fenómenos cooperativos:
+\\ \pause
+En general, existen propiedades macroscópicas que no son el resultado de superponer comportamientos microscópicos.  \pause Ejemplos: cambios de fase en contraste con la presión y/o irreversibilidad.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos particulares de la Física Estadística}  
+\setbeamercolor{item projected}{bg=cerise,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Deducir nuevos niveles de descripción:
+\\ \pause
+Hay sistemas donde no tenemos \enquote{leyes macroscópicas} \pause pero sospechamos que existen, \pause por ejemplo en economía, neurociencia, sistemas fuera del equilibrio, etc.
+\\ \pause
+También existen niveles mesoscópicos (intermedios) que tienen sus propias regularidades.
+\end{enumerate}
+\end{frame}
+
+\subsection{Del alcance del curso}
+
+\begin{frame}
+\frametitle{Enfoque de trabajo}
+En este curso nos vamos a limitar a estudiar la \textocolor{carnelian}{Física Estadística de Equilibrio}.
+\\
+\bigskip
+\pause
+Esto es, vamos a construir la teoría que conecta los niveles microscópico y macroscópico de los sistemas en equilibrio termodinámico.
+\end{frame}
+\begin{frame}
+\frametitle{Descripciones de los sistemas}
+\setbeamercolor{item projected}{bg=airforceblue,fg=aliceblue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+En este contexto los sistemas tienen una:
+\pause
+\begin{enumerate}[<+->]
+\item Descripción microscópica dada por la Mecánica Clásica o Cuántica (según corresponda).
+\item Descripción macroscópica dada por la Termodinámica que se basa en unos pocos principios (deducidos de
+un conjunto de experimentos)
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Sobre la Termodinámica}
+Otro de los objetivos fundamentales de la física estadística es deducir las leyes o principios en los que se basa la termodinámica.
+\end{frame}
+\begin{frame}
+\frametitle{Principios de la Termodinámica}
+Estos principios son:
+\pause
+\setbeamercolor{item projected}{bg=bluegray,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item \textocolor{burntumber}{Principio Cero}: Si dos cuerpos están en equilibrio con un tercero, también lo están entre sí.
+\item \textocolor{cadetblue}{Primer Principio} (ley de conservación de la energía): aunque la energía toma muchas formas, la cantidad
+total de energía se mantiene constante.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Principios de la Termodinámica}
+\setbeamercolor{item projected}{bg=bluegray,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item \textocolor{cadmiumred}{Segundo Principio} (ley de aumento de la entropía en un proceso irreversible): no existe ningún dispositivo cíclico que absorba calor de una única fuente y lo convierta íntegramente en trabajo.
+\item \textocolor{camel}{Tercer Principio:} Teorema de Nernst o inaccesibilidad del cero absoluto (es imposible enfriar un sistema hasta el cero absoluto mediante una serie finita de procesos).
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Desarrollo de una teoría}
+A partir de estos principios (deducidos experimentalmente) se desarrolla una teoría autoconsistente y completa
+que describe la física macroscópica de gran cantidad de sistemas (siempre de equilibrio).
+\end{frame}
+\begin{frame}
+\frametitle{Preguntas importantes}
+Sin embargo, existen gran cantidad de preguntas que no podemos responder dentro del marco de la termodinámica. \pause 
+Algunas preguntas de tipo fundamental son:
+\pause
+\setbeamercolor{item projected}{bg=buff,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item ¿Por qué las leyes de la termodinámica se cumplen perfectamente independientemente del tipo de átomos y/o moléculas que componen las substancias? (reducción de variables y universalidad).
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Preguntas importantes}
+\setbeamercolor{item projected}{bg=buff,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item ¿Se cumplen en cualquier sistema con cualquier interacción?¿Cuales son los límites de aplicabilidad?
+\item ¿Qué papel tiene la dinámica microscópica en el comportamiento macroscópico de un sistema?
+\item ¿Las leyes de la Termodinámica no dependen del carácter cuántico o clásico del sistema microscópico?
+\item ¿Por qué los procesos son irreversibles si las leyes de movimiento microscópicas son reversibles temporalmente?
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo interesante}
+Ejemplo interesante en los albores de la Física Estadística:
+\\
+\bigskip
+\pause
+El \textocolor{byzantium}{calor específico} se define como la cantidad de calor que hay que suministrar a la unidad de masa de una sustancia o sistema termodinámico para elevar su temperatura en una unidad.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo interesante}
+En general, el valor del calor específico depende de la temperatura:
+\pause
+\setbeamercolor{item projected}{bg=capri,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item En un gas ideal es constante casi a cualquier temperatura.
+\item Para un sólido cristalino tiende a 0 al bajar la temperatura y tiende a una constante a altas T.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo interesante}
+\setbeamercolor{item projected}{bg=capri,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item En un sólido magnético exhibe un máximo a cierta T.
+\item En los cambios de fase presenta un pico pronunciado o divergencia.
+\end{enumerate}
+\pause
+¿De qué dependen estas variaciones? \pause ¿Cómo se pueden relacionar con la física microscópica?
+\end{frame}
+\begin{frame}
+\frametitle{Preguntas de índole más práctico:}
+\setbeamercolor{item projected}{bg=coolblack,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item ¿Cómo podemos obtener la ecuación de estado o los potenciales termodinámicos a partir de las propiedades microscópicas del sistema?
+\item El agua es líquida entre $0^{\circ} \text{C}$ y $100^{\circ} \text{C}$.
+\\ \pause
+¿Por qué a $-0.00000001^{\circ} \text{C}$ se convierte en sólido \pause o a $100.00000001^{\circ} \text{C}$ se convierte en gas? \pause Las interacciones entre moléculas de agua no cambian con la temperatura. \pause ¿Que está sucediendo?
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Preguntas de índole más práctico:}
+\setbeamercolor{item projected}{bg=coolblack,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item ¿Cómo cambian los potenciales termodinámicos en un cambio de fase? \pause ¿Hay singularidades matemáticas? \pause ¿De qué tipo?
+\item ¿En qué condiciones aparece un cambio de fase de primer o de segundo orden?
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Respuestas a las preguntas}
+La Física Estadística del Equilibrio es capaz de responder a todas las anteriores preguntas y a otras muchas.
+\end{frame}
+\begin{frame}
+\frametitle{Respuestas a las preguntas}
+Con ella conseguimos entender cómo se relacionan en un sistema las descripciones microscópica y macroscópica y seremos capaces de obtener los valores de las magnitudes macroscópicas a partir de sus interacciones microscópicas.
+\end{frame}
+\begin{frame}
+\frametitle{Otro nombre a la Física Estadística}
+A la \textocolor{ao}{Física Estadística} también se la conoce como \textocolor{crimson}{Mecánica Estadística}.
+\end{frame}
+\begin{frame}
+\frametitle{Utilidad}
+El aparato matemático formal que permite llevar a cabo la conexión micro - macro en los sistemas de equilibrio tiene en realidad un rango de aplicabilidad mucho mayor, \pause con aplicaciones en neurociencia, ecología, sociología (\enquote{the social atom}), etc.
+\end{frame}
+\begin{frame}
+\frametitle{Naturaleza de la Física Estadística}
+En este sentido, es claro que la Física Estadística es una ciencia intrínsecamente interdisciplinar y ahí radica su éxito y popularidad en las últimas décadas, \pause en las que ha desembocado en lo que ahora se denomina \textocolor{darkolivegreen}{ciencia de los sistemas complejos}.
+\end{frame}
+
+\end{document}
