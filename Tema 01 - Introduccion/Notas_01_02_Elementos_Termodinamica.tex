@@ -483,5 +483,55 @@ Para la descripción de un sistema termodinámico conviene introducir el \textoc
     \caption{Espacio de estados termodinámicos}
 \end{figure}
 \end{frame}
+\begin{frame}[plain]
+\begin{figure}
+\centering
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[scale=3,tdplot_main_coords]
+        
+        % AXES
+        \coordinate (O) at (0, 0, 0);
+        \draw[thick,->] (0, 0, 0) -- (2, 0, 0) node [anchor=north east] {$T$};
+        \draw[thick,->] (0, 0, 0) -- (0, 1.25, 0) node [anchor=north west] {$a_{1}$};
+        \draw[thick,->] (0, 0, 0) -- (0, 0, 1) node [anchor=south] {$a_{2}$};
 
+        \draw [fill] (2, 0.4, 1.1) circle (0.5pt);
+        \node at (2, 0.4, 1) {\text{\footnotesize{$X$}}};
+        \draw [fill] (0.5, 1.1, 1) circle (0.5pt);
+        \node at (1, 1.3, 1.1) {\text{\footnotesize{$Y$}}};
+    \end{tikzpicture}
+    \caption{$X$, $Y$ designan dos estados termodinámicos diferentes.}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Funciones de estado}
+En lo que sigue suponemos que para un sistema termodinámico dado siempre existen \textocolor{amaranth}{dos funciones básicas de estado} definidas en el espacio de estados de equilibrio termodinámico, con significados y propiedades que serán especificadas posteriormente:
+\pause
+\setbeamercolor{item projected}{bg=ao(english),fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Energía interna $U (T, a)$.
+\item Entropía $S (T, a)$.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Funciones de estado}
+Por ser $U (T, a)$ y $S (T, a)$ funciones de estado podemos construir las diferenciales totales:
+\pause
+\begin{eqnarray}
+\dd{U} &=& \pdv{U (T, a)}{T} \dd{T} + \nsum_{i=1}^{g} \pdv{U (T, a)}{a_{i}} \dd{a_{i}} \label{eq:ecuacion_01_02} \\[1em] \pause
+\dd{S} &=& \pdv{S (T, a)}{T} \dd{T} + \nsum_{i=1}^{g} \pdv{S (T, a)}{a_{i}} \dd{a_{i}} \label{eq:ecuacion_01_03}
+\end{eqnarray}
+\end{frame}
+\begin{frame}
+\frametitle{Funciones de estado}
+Que nos dicen que la energía interna y la entropía de un sistema ter modinámico cambian cuando la temperatura $T$ del sistema o las coordenadas generalizadas $(a_{1}, a_{2}, \ldots, a_{g})$ experimentan cambios $\dd{T}$ y $(\dd{a_{1}}, \dd_{a_{2}}, \ldots, \dd_{a_{g}})$, respectivamente.
+\end{frame}
+\begin{frame}
+\frametitle{Funciones de estado}
+El valor de los cambios $\dd{U}$ y $\dd{S}$ no depende de los procesos que se sigan sino de los estados termodinámicos inicial y final.
+\end{frame}
 \end{document}
