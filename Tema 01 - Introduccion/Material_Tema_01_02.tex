@@ -1,0 +1,49 @@
+\input{../Preambulos/preambulo_materiales}
+\usepackage{chemformula}
+\title{Física Estadística\vspace{-3ex}}
+\author{M. en C. Gustavo Contreras Mayén}
+\date{ }
+
+\begin{document}
+
+\vspace{-4cm}
+\maketitle
+\fontsize{14}{14}\selectfont
+\tableofcontents
+\newpage
+
+\section{Física Estadística.}
+\subsection{Base estadística de la termodinámica.}
+
+%Ref. Pathria.
+
+En los anales de la física térmica, la década de 1850 marca una época muy definida. En ese momento, la ciencia de la termodinámica, que surgió esencialmente de un estudio experimental del comportamiento macroscópico de los sistemas físicos, se había convertido, a través del trabajo de Carnot, Joule, Clausius y Kelvin, en una disciplina física segura y estable. Se encontró que las conclusiones teóricas que se derivan de las dos primeras leyes de la termodinámica concuerdan muy bien con los resultados experimentales correspondientes. Al mismo tiempo, la teoría cinética de los gases, cuyo objetivo es explicar el comportamiento macroscópico de los sistemas gaseosos en términos del movimiento de sus moléculas y que hasta ahora había prosperado más en la especulación que en el cálculo, comenzó a emerger como una teoría matemática real. Sus éxitos iniciales fueron deslumbrantes; sin embargo, no se pudo establecer un contacto real con la termodinámica hasta alrededor de 1872, cuando Boltzmann desarrolló su teorema H y, por lo tanto, estableció una conexión directa entre la entropía por un lado y la dinámica molecular por el otro. Casi simultáneamente, la teoría convencional (cinética) comenzó a dar paso a su sucesora más sofisticada: la teoría del conjunto. El poder de las técnicas que finalmente surgieron redujeron la termodinámica al estatus de una consecuencia \enquote{esencial} del encuentro de las estadísticas y la mecánica de las moléculas que constituyen un sistema físico dado. Entonces fue natural dar al formalismo resultante el nombre de \emph{mecánica estadística}.
+\par
+Como preparación para el desarrollo de la teoría formal, comenzamos con algunas consideraciones generales sobre la naturaleza estadística de un sistema macroscópico. Estas consideraciones proporcionarán la base para una interpretación estadística de la termodinámica. Cabe mencionar aquí que, a menos que se haga una afirmación en contrario, se supone que el sistema en estudio se encuentra en uno de sus estados de equilibrio.
+
+\subsection{Estados macro y microscópicos.}
+
+Consideramos un sistema físico compuesto de $N$ partículas idénticas confinadas a un espacio de volumen $V$. En un caso típico, $N$ sería un número extremadamente grande, generalmente del orden de $\num{d23}$. En vista de esto, es habitual realizar análisis en el llamado \emph{límite termodinámico}, a saber, $N \to \infty$, $V \to \infty$ (tal que la relación $N / V$, que representa la \emph{densidad de partículas} $n$, permanece fija en un valor preasignado). En este límite, las \emph{propiedades extensivas} del sistema se vuelven directamente proporcionales al tamaño del sistema (es decir, proporcionales a $N$ o a $V$ ), mientras que las \emph{propiedades intensivas} se vuelven independientes del mismo; la densidad de partículas, por supuesto, sigue siendo un parámetro importante para todas las propiedades físicas del sistema.
+\par
+A continuación consideramos la energía total $E$ del sistema. Si se pudiera considerar que las partículas que componen el sistema no interactúan, la energía total $E$ sería igual a la suma de las energías $\varepsilon_{i}$ de las partículas individuales:
+\begin{align}
+E = \nsum_{i} n_{i} \, \varepsilon_{i}
+\label{eq:ecuacion_02_01}
+\end{align}
+donde $n_{i}$ indica el número de partículas cada una con energía $\varepsilon_{i}$. Se entiende claramente que:
+\begin{align}
+N = \nsum_{i} n_{i}
+\label{eq:ecuacion_02_02}
+\end{align}
+De acuerdo con la mecánica cuántica, las energías de una sola partícula $\varepsilon_{i}$ son discretas y sus valores dependen crucialmente del volumen $V$ al que están confinadas las partículas. En consecuencia, los valores posibles de la energía total $E$ también son discretos. Sin embargo, para grandes $V$, el espaciamiento de los diferentes valores de energía es tan pequeño en comparación con la energía total del sistema que el parámetro $E$ bien podría considerarse como una \emph{variable continua}. Esto sería cierto incluso si las partículas interactuaran entre sí; por supuesto, en ese caso la energía total $E$ no puede escribirse en la forma de la ec. (\ref{eq:ecuacion_02_01}).
+\par
+La especificación de los valores reales de los parámetros $N$, $V$ y $E$ define un \emph{macroestado} del sistema dado.
+\par
+A nivel molecular, sin embargo, todavía existe un gran número de posibilidades porque en ese nivel habrá \emph{en general} un gran número de formas diferentes en las que se puede realizar el macroestado $(N, V, E)$ del sistema dado. En el caso de un sistema que no interactúa, dado que la energía total $E$ consiste en una simple suma de las $N$ energías $\varepsilon_{i}$ de una sola partícula, obviamente habrá un gran número de formas diferentes en las que se puede elegir el $\varepsilon_{i}$ individual para hacer que la energía total sea igual a $E$. En otras palabras, habrá un gran número de formas diferentes en las que la energía total $E$ del sistema puede distribuirse entre las $N$ partículas que lo constituyen. Cada una de estas formas (diferentes) especifica un \emph{microestado}, o \emph{complexión}, del sistema dado. En general, los diversos microestados, o complexiones, de un sistema dado pueden identificarse con las soluciones independientes $\psi (\vb{r}_{1}, \ldots, \vb{r}{N})$ de la ecuación de Schrödinger del sistema, correspondiente al valor propio $E$ del Hamiltoniano relevante. En cualquier caso, a un macroestado dado del sistema le corresponde en general un gran número de microestados y parece natural suponer, cuando no hay otras restricciones, que en cualquier momento $t$ es igualmente probable que el sistema se encuentre en cualquiera de estos microestados. Esta suposición forma la columna vertebral de nuestro formalismo y generalmente se la conoce como el postulado de \enquote{probabilidades iguales \emph{a priori}} para todos los microestados consistentes con un macroestado dado.
+\par
+El número real de todos los microestados posibles será, por supuesto, una función de $N$, $V$ y $E$, puede denotarse con el símbolo $\Omega (N, V, E)$; la dependencia de $V$ surge porque los posibles valores $\varepsilon_{i}$ de la energía $\varepsilon$ de una sola partícula son en sí mismos una función de este parámetro. Sorprendentemente, es a partir de la magnitud del número $\Omega$, y de su dependencia de los parámetros $N$, $V$ y $E$, que se puede derivar la termodinámica completa del sistema dado.
+\par
+No nos detendremos aquí para discutir las formas en que se puede calcular el número $\Omega (N, V, E)$; lo haremos sólo después de que hayamos desarrollado nuestras consideraciones lo suficiente como para que podamos llevar a cabo más derivaciones a partir de ellas. Primero tenemos que descubrir la manera en que este número se relaciona con cualquiera de las principales cantidades termodinámicas. Para hacer esto, consideramos el problema del \enquote{contacto térmico} entre dos sistemas físicos dados, con la esperanza de que esta consideración revele la verdadera naturaleza del número $\Omega$.
+
+
+\end{document}
