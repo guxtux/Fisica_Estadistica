@@ -28,14 +28,14 @@ Consideramos un sistema físico compuesto de $N$ partículas idénticas confinad
 A continuación consideramos la energía total $E$ del sistema. Si se pudiera considerar que las partículas que componen el sistema no interactúan, la energía total $E$ sería igual a la suma de las energías $\varepsilon_{i}$ de las partículas individuales:
 \begin{align}
 E = \nsum_{i} n_{i} \, \varepsilon_{i}
-\label{eq:ecuacion_02_01}
+\label{eq:ecuacion_01_01}
 \end{align}
 donde $n_{i}$ indica el número de partículas cada una con energía $\varepsilon_{i}$. Se entiende claramente que:
 \begin{align}
 N = \nsum_{i} n_{i}
 \label{eq:ecuacion_02_02}
 \end{align}
-De acuerdo con la mecánica cuántica, las energías de una sola partícula $\varepsilon_{i}$ son discretas y sus valores dependen crucialmente del volumen $V$ al que están confinadas las partículas. En consecuencia, los valores posibles de la energía total $E$ también son discretos. Sin embargo, para grandes $V$, el espaciamiento de los diferentes valores de energía es tan pequeño en comparación con la energía total del sistema que el parámetro $E$ bien podría considerarse como una \emph{variable continua}. Esto sería cierto incluso si las partículas interactuaran entre sí; por supuesto, en ese caso la energía total $E$ no puede escribirse en la forma de la ec. (\ref{eq:ecuacion_02_01}).
+De acuerdo con la mecánica cuántica, las energías de una sola partícula $\varepsilon_{i}$ son discretas y sus valores dependen crucialmente del volumen $V$ al que están confinadas las partículas. En consecuencia, los valores posibles de la energía total $E$ también son discretos. Sin embargo, para grandes $V$, el espaciamiento de los diferentes valores de energía es tan pequeño en comparación con la energía total del sistema que el parámetro $E$ bien podría considerarse como una \emph{variable continua}. Esto sería cierto incluso si las partículas interactuaran entre sí; por supuesto, en ese caso la energía total $E$ no puede escribirse en la forma de la ec. (\ref{eq:ecuacion_01_01}).
 \par
 La especificación de los valores reales de los parámetros $N$, $V$ y $E$ define un \emph{macroestado} del sistema dado.
 \par
@@ -45,5 +45,61 @@ El número real de todos los microestados posibles será, por supuesto, una func
 \par
 No nos detendremos aquí para discutir las formas en que se puede calcular el número $\Omega (N, V, E)$; lo haremos sólo después de que hayamos desarrollado nuestras consideraciones lo suficiente como para que podamos llevar a cabo más derivaciones a partir de ellas. Primero tenemos que descubrir la manera en que este número se relaciona con cualquiera de las principales cantidades termodinámicas. Para hacer esto, consideramos el problema del \enquote{contacto térmico} entre dos sistemas físicos dados, con la esperanza de que esta consideración revele la verdadera naturaleza del número $\Omega$.
 
+\subsection{Significado físico del número \texorpdfstring{$\Omega (N, V, E)$}{O (N,V,E).}}
+
+Consideremos dos sistemas físicos, $A_{1}$ y $A_{2}$, que están en equilibrio por separado, como se presenta en la figura (\ref{fig:figura_01_01}).
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw [align=center] (0, 0) rectangle (3, 1.5) node [pos=0.5] {$A_{1}$ \\ $(N_{1}, V_{1}, E_{1})$};
+        \draw [align=center] (3, 0) rectangle (6, 1.5) node [pos=0.5] {$A_{2}$ \\ $(N_{2}, V_{2}, E_{2})$};
+    \end{tikzpicture}
+    \caption{Dos sistemas físicos que se ponen en contacto térmico.}
+    \label{fig:figura_01_01}
+\end{figure}
+Sea el macroestado de $A_{1}$ representado por los parámetros $N_{1}, V_{1}$ y $E_{1}$ de manera que tenga $\Omega_{1} (N_{1}, V_{1}, E_{1})$ microestados posibles, y sea el macroestado de $A_{2}$ representado por los parámetros $N_{2}, V_{2}$ y $E_{2}$ de manera que tiene $\Omega_{2} (N_{2}, V_{2}, E_{2})$ posibles microestados. La forma matemática de la función $\Omega_{1}$ puede no ser la misma que la de la función $\Omega_{2}$, porque eso depende en última instancia de la naturaleza del sistema. Por supuesto, creemos que todas las propiedades termodinámicas de los sistemas $A_{1}$ y $A_{2}$ pueden ser derivados de las funciones $\Omega_{1} (N_{1}, V_{1}, E_{1})$ y $\Omega_{2} (N_{2}, V_{2}, E_{2})$, respectivamente.
+\par
+Ahora ponemos los dos sistemas en contacto térmico entre sí, permitiendo así la posibilidad de intercambio de energía entre los dos; esto se puede hacer deslizando una pared conductora y quitando la impermeable. Para simplificar, los dos sistemas todavía están separados por una pared rígida e impenetrable, de modo que los respectivos volúmenes $V_{1}$ y $V_{2}$ y los respectivos números de partículas $N_{1}$ y $N_{2}$ permanecen fijos. Las energías $E_{1}$ y $E_{2}$, sin embargo, se vuelven variables y la única condición que restringe su variación es:
+\begin{align}
+E^{(0)} = E_{1} + E_{2} = \text{constante}
+\label{eq:ecuacion_02_01}
+\end{align}
+Aquí, $E^{(0)}$ indica la energía del sistema compuesto $A^{(0)} (\equiv A_{1} + A_{2})$; se desprecia la energía de interacción entre $A_{1}$ y $A_{2}$, si la hay. Ahora, en cualquier momento $t$, es igualmente probable que el subsistema $A_{1}$ se encuentre en cualquiera de los microestados $\Omega_{1} (E_{1})$, mientras que es igualmente probable que el subsistema $A_{2}$ se encuentre en cualquiera de los microestados $\Omega_{2} (E_{2})$; por lo tanto, es igualmente probable que el sistema compuesto $A^{(0)}$ esté en cualquiera de los:
+\begin{align}
+\Omega_{1} (E_{1}) \, \Omega_{2} (E_{2}) = \Omega_{1} (E_{1}) \, \Omega_{2} (E^{(0)} - E_{1}) = \Omega^{(0)} (E^{(0)}, E_{1})
+\label{eq:ecuacion_02_02}
+\end{align}
+microestados. Claramente, el número $\Omega^{(0)}$ en sí mismo varía con $E_{1}$. Surge ahora la siguiente pregunta: ¿a qué valor de $E_{1}$ estará en equilibrio el sistema compuesto? En otras palabras, ¿hasta dónde llegará el intercambio de energía para que los subsistemas $A_{1}$ y $A_{2}$ alcancen un equilibrio mutuo?
+\par
+Afirmamos que esto sucederá en ese valor de $E_{1}$ que maximiza el número $\Omega^{(0)} (E^{(0)}, E_{1})$. La filosofía detrás de esta afirmación es que un sistema físico, abandonado a sí mismo, procede naturalmente en una dirección que le permite asumir un número cada vez mayor de microestados hasta que finalmente se establece en un macroestado que ofrece el \emph{mayor número posible} de microestados. Estadísticamente hablando, consideramos un macroestado con un mayor número de microestados como un estado más probable, y el que tiene un mayor número de microestados como el más probable. Estudios detallados muestran que, para un sistema típico, el número de microestados pertenecientes a cualquier macroestado que se desvía aunque sea ligeramente del más probable es \enquote{órdenes de magnitud} menor que el número perteneciente a este último. Por tanto, el estado más probable de un sistema es el macroestado en el que el sistema pasa una fracción abrumadoramente grande de su tiempo. Entonces es natural identificar este estado con el estado de \emph{equilibrio} del sistema.
+\par
+Denotando el valor de equilibrio de $E_{1}$ por $\bar{E}_{1}$ (y el de $E_{2}$ por $\bar{E}_{2})$, obtenemos, al maximizar $\Omega^{(0)}$:
+\begin{align*}
+\left( \pdv{\Omega_{1} (E_{1})}{E_{1}} \right) \eval_{E_{1} = \bar{E}_{1}} \, \Omega_{2} (\bar{E}_{2}) + \Omega_{1} (\bar{E}_{1}) \, \left( \pdv{\Omega_{2} (E_{2})}{E_{2}} \right) \eval_{E_{2} = \bar{E}_{2}} \cdot \pdv{E_{2}}{E_{1}} = 0
+\end{align*}
+Ya que $\pdv*{E_{2}}{E_{1}} = -1$, ver la ec. (\ref{eq:ecuacion_02_01}), la condición anterior se puede escribir como:
+\begin{align*}
+\left( \pdv{\ln \Omega_{1} (E_{1})}{E_{1}} \right) \eval_{E_{1} = \bar{E}_{1}} = \left( \pdv{\ln \Omega_{2} (E_{2})}{E_{2}} \right) \eval_{E_{2} = \bar{E}_{2}}
+\end{align*}
+Así, nuestra condición de equilibrio se reduce a la igualdad de los parámetros $\beta_{1}$ y $\beta_{2}$ de los subsistemas $A_{1}$ y $A_{2}$, respectivamente, donde $\beta$ está definido por:
+\begin{align}
+\beta = \left( \pdv{\ln \Omega (N, V, E)}{E} \right)_{N, V, E = \bar{E}}
+\label{eq:ecuacion_02_03}
+\end{align}
+Así encontramos que cuando dos sistemas físicos se ponen en contacto térmico, lo que permite un intercambio de energía entre ellos, este intercambio continúa \emph{hasta} que se alcanzan los valores de equilibrio $\bar{E}_{1}$ y $\bar{E}_{2}$ de las variables $E_{1}$ y $E_{2}$. Una vez que se alcanzan estos valores, no hay más intercambio neto de energía entre los dos sistemas; se dice entonces que los sistemas han alcanzado un estado de equilibrio térmico. De acuerdo con nuestro análisis, esto sucede solo cuando los valores respectivos del parámetro $\beta$, es decir, $\beta_{1}$ y $\beta_{2}$, se igualan. Entonces es natural esperar que el parámetro $\beta$ esté relacionado de alguna manera con la \emph{temperatura termodinámica} $T$ de un sistema dado. Para determinar esta relación, recordamos la fórmula termodinámica:
+\begin{align}
+\left( \pdv{S}{E} \right)_{N, V} = \dfrac{1}{T}
+\label{eq:ecuacion_02_04}
+\end{align}
+donde $S$ es la entropía del sistema en cuestión. Comparando las ecuaciones (\ref{eq:ecuacion_02_03}) y (\ref{eq:ecuacion_02_04}), concluimos que existe una íntima relación entre la cantidad termodinámica $S$ y la cantidad estadística $\Omega$; podemos, de hecho, escribir para cualquier sistema físico
+\begin{align}
+\dfrac{\Delta S}{\Delta (\ln \Omega)} = \dfrac{1}{\beta \, T} = \text{constante}
+\label{eq:ecuacion_02_05} 
+\end{align}
+Esta correspondencia fue establecida por primera vez por Boltzmann, quien también creía que, dado que la relación entre el enfoque termodinámico y el enfoque estadístico parece tener un carácter fundamental, la constante que aparece en la ec. (\ref{eq:ecuacion_02_05}) debe ser una \emph{constante universal}. Fue Planck quien primero escribió la fórmula explícita:
+\begin{align}
+S = k \, \ln \Omega
+\label{eq:ecuacion_02_06}
+\end{align}
 
 \end{document}
